@@ -1,0 +1,36 @@
+// Buttons
+.btn
+  border-radius: 5px
+  font-size: 17px
+  font-weight: bold
+  letter-spacing: 1.3px
+  height: 65px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: 0 65px
+  text-decoration: none
+  transition: all 0.3s ease
+  +r($xs)
+    font-size: 14px
+    letter-spacing: 1.07px
+    padding: 0 40px
+    height: 52px
+
+.btn-blue
+  background: $blue2
+  color: $white
+  &:hover
+    background: $dark-blue
+.btn-home
+  background: $white
+  color: $blue2
+  &:hover
+    background: $dark-blue
+    color: $white
+.btn-white
+  background: $white
+  color: $blue2
+  &:hover
+    background: $blue2
+    color: $white

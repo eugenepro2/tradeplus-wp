@@ -1,0 +1,31 @@
+- var svgSprite = 'img/sprite.svg'
+
+mixin icon(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class=name + modClass)
+    use(xlink:href= svgSprite + '#' + name)
+
+mixin small()
+  .col-md-4.col-sm-6.col-xs-12.wow.fadeIn(data-wow-delay=".3s")
+    a(href="#").branchs__small
+      article
+        header
+          img(src="img/branch/1.jpg", alt="")
+        main
+          h1 Акушерство и <br>гинекология
+          p Аппараты для реанимации новорожденных, гинекологические принадлежности и т.д.
+
+mixin big()
+  .col-md-8.col-sm-6.col-xs-12.wow.fadeIn(data-wow-delay=".3s")
+    a(href="#").branchs__big
+      article
+        header
+          img(src="img/branch/2.jpg", alt="")
+        main
+          h1 Анестезиология <br>и реанимация
+          p Наркозно-дыхательное оборудование и аппараты для ИВЛ, реанимационное оборудование, мобильное и стационарное и т.д.
+          div
+            i.icon.icon-arrow

@@ -1,0 +1,115 @@
+.page.branch
+  .item
+    height: 300px
+    border-radius: 6px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 50px
+    padding: 50px 65px 0 65px
+    +r($md)
+      height: 350px
+      margin-bottom: 20px
+    +r($xs)
+      height: initial
+      padding: 30px 35px
+      flex-wrap: wrap
+      align-items: flex-start
+    h2
+      font-size: 26px
+      font-weight: normal
+      letter-spacing: 1.63px
+      text-transform: uppercase
+      margin-bottom: 20px
+      line-height: 35px
+      +r($xs)
+        word-break: break-word
+        font-size: 20px
+        letter-spacing: 1.25px
+        margin-bottom: 18px
+    p
+      font-size: 17px
+      letter-spacing: 1.13px
+      line-height: 22px
+      +r($xs)
+        font-size: 14px
+        letter-spacing: 0.08px
+    &--blue
+      border: solid 1px $light-periwinkle
+      h2, p
+        color: $dark-blue
+    &--dark
+      border: solid 1px $light-periwinkle
+      margin-bottom: 20px
+      h2, p
+        color: $dark-blue
+    &--big
+      padding: 50px 160px
+      +r($md)
+        padding: 50px 65px 0 65px
+      +r($xs)
+        height: initial
+        padding: 30px 35px
+        flex-wrap: wrap
+  .list
+    padding: 75px 0 25px
+    +r($xs)
+      padding: 40px 0 20px
+    &__dark
+      background: $grey
+      padding: 75px 0 100px
+      +r($xs)
+        padding: 40px 0 20px
+      h3
+        font-size: 18px
+        letter-spacing: 1.13px
+        color: $dark-blue
+        text-align: center
+        margin-bottom: 50px
+  .navigate
+    padding: 40px 0
+    background-color: $grey
+    .prev, .next
+      text-decoration: none
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      +r($xs)
+        margin-bottom: 20px
+      i
+        width: 50px !important
+        height: 50px !important
+        background: $blue
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 21px
+        color: $white
+        transition: background 0.3s
+        +r($xs)
+          width: 50px
+          height: 50px
+      p
+        color: $blue
+        letter-spacing: 1.13px
+        font-weight: bold
+        font-size: 14px
+        transition: color 0.3s
+        +r($xs)
+          width: 60%
+        
+      &:hover
+        i
+          background: $dark-blue
+        p
+          color: $dark-blue
+    .prev
+      i
+        margin-right: 30px
+    .next
+      i
+        margin-left: 30px
+        transform: rotate(-180deg)
+      p
+        text-align: right

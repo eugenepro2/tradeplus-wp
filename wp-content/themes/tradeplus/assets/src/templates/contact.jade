@@ -1,0 +1,24 @@
+---
+title: Контакты
+---
+extends layouts/_layout
+block content
+  .page.contact(data-barba="container")
+    section.intro.intro-dark.intro-contact
+      .intro__block
+        .main
+          #map
+          .container
+            .row.middle-xs
+              .col-md-5.col-xs-12
+                h1.wow.fadeInDown <span>Контакты</span>
+                ul
+                  li.wow.fadeIn(data-wow-delay=".5s")
+                    p Телефон (г.Москва):
+                    a(href="tel:+7 495 374-50-17") +7 495 374-50-17
+                  li.wow.fadeIn(data-wow-delay=".6s")
+                    p Адрес:<br>121354, Москва, Дорогобужская <br>улица, 14, стр. 6
+                  li.wow.fadeIn(data-wow-delay=".7s")
+                    p E-mail:
+                    a(href="mailto:info@nmedcom.ru") info@nmedcom.ru
+    #map-mobile

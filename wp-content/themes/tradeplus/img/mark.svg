@@ -1,0 +1,11 @@
+<svg width="179" height="68" viewBox="0 0 179 68" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Group 2
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M2 0l174.517.041a2 2 0 0 1 2 2V56a2 2 0 0 1-2 2l-103.404-.041L62.452 68 51.725 57.959H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#282D57"/>
+        <text font-family="Helvetica-Bold, Helvetica" font-size="14" font-weight="bold" letter-spacing=".583" fill="#FFF">
+            <tspan x="21" y="34">ООО &quot;ТрэйдПлюс&quot;</tspan>
+        </text>
+    </g>
+</svg>

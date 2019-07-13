@@ -1,0 +1,67 @@
+.header__mobile
+  position: fixed
+  width: 100%
+  height: 0
+  background: $white
+  padding: 0
+  transition: all .6s cubic-bezier(0.74, 0.01, 0.29, 1)
+  z-index: -1
+  &.active
+    height: 100%
+    padding: 35px 40px
+    z-index: 1000
+    .block
+      opacity: 1
+  .block
+    opacity: 0
+    transition: all .6s cubic-bezier(0.74, 0.01, 0.29, 1)
+  h3
+    font-size: 16px
+    letter-spacing: 1px
+    color: $light-periwinkle
+    font-weight: normal
+    text-transform: uppercase
+    margin-bottom: 30px
+  ul
+    margin-bottom: 35px
+    li
+      line-height: 3
+      &.active
+        a
+          border-bottom: 1px solid $dark-blue
+      a
+        color: $menu
+        height: 100%
+        display: inline-flex
+        align-items: center
+        font-size: 21px
+        letter-spacing: 1.31px
+        text-decoration: none
+        text-transform: uppercase
+  .header__info
+    .phone
+      font-size: 20px
+    .mail
+      font-size: 15px
+
+
+.menu-button
+  display: flex
+  justify-content: flex-end
+  span
+    display: block
+    &:before, &:after
+      content: ''
+      display: block
+      width: 40px
+      height: 2px
+      background: $dark-blue
+      border-radius: 1.5px
+      transition: .3s ease
+    &:after
+      margin-top: 10px
+    &.active
+      &:before
+        transform: rotate(45deg) translateY(7px)
+      &:after
+        transform: rotate(-45deg) translateY(-9px) translateX(1px)

@@ -1,4 +1,3 @@
-import Slideout from 'slideout';
 import $ from 'jquery';
 
 $('.menu-button').on('click', function() {

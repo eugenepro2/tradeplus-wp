@@ -87,3 +87,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Инициализирует переменные WordPress и подключает файлы. */
 require_once( ABSPATH . 'wp-settings.php' );
+
+define ('ALLOW_UNFILTERED_UPLOADS', true);

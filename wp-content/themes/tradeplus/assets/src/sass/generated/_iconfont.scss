@@ -27,8 +27,6 @@ $icon-burger: "\EA02";
 .icon {
   @extend %icon;
   display: inline-block;
-  width: initial !important;
-  height: initial !important;
 }
 
 .icon-arrow:before { content: $icon-arrow; }

@@ -67,6 +67,18 @@ class Intro extends WPBakeryShortCode {
 										'weight' => 0,
 										'group' => 'Настройки',
 									),   
+									array(
+										'type' => 'checkbox',
+										'holder' => 'checkbox',
+										'class' => 'text-class',
+										'heading' => __( 'Скрыть кнопку?', 'text-domain' ),
+										'param_name' => 'checkbox',
+										'value' => __( '', 'text-domain' ),
+										'description' => __( 'Поставь галочку если кнопку нужно скрыть', 'text-domain' ),
+										'admin_label' => false,
+										'weight' => 0,
+										'group' => 'Настройки',
+									),  
                   array(
 										'type' => 'textfield',
 										'holder' => 'btn',
@@ -107,12 +119,14 @@ class Intro extends WPBakeryShortCode {
 			'title' => '',
       'text' => '',
       'btn_text' => '',
-			'href' => ''
+			'href' => '',
+			'checkbox' => ''
 			), $atts ) );
 			
 			$image =  wp_get_attachment_image_url($image, 'full');
 			$href = vc_build_link( $href );
 			$href = get_permalink(print_r($href));
+			$show = ($checkbox) ? "style='display:none'" : '';
 			$html = "
             <div style='background-image: url($image)' class='intro__block'><img src='$image' alt='' class='hidden-md'>
               <div class='main'>
@@ -121,7 +135,7 @@ class Intro extends WPBakeryShortCode {
                     <div class='col-md-5 col-xs-12'>
                       <h1 class='wow fadeInDown'>$title</h1>
                       <p data-wow-delay='.5s' class='wow fadeIn'>$text</p>
-                      <div class='flex'><a href='$href' data-wow-delay='.7s' class='wow fadeIn btn btn-white'>$btn_text</a></div>
+                      <div $show class='flex'><a href='$href' data-wow-delay='.7s' class='wow fadeIn btn btn-white'>$btn_text</a></div>
                     </div>
                   </div>
                 </div>

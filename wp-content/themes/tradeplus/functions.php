@@ -124,9 +124,16 @@ function tradeplus_scripts() {
 
 	wp_enqueue_script( 'tradeplus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'tradeplus-yandex', 'https://api-maps.yandex.ru/2.1/?apikey=2e293b19-2a14-478a-b7c9-63dbbea87b4a&amp;lang=ru_RU', array(), '20151215', true );
+
+	wp_enqueue_script( 'tradeplus-slider', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'tradeplus-wow', 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'tradeplus-appjs', get_template_directory_uri() . '/js/app.js', array(), '20151215', true );
 	
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js', false, false, true);
+	wp_enqueue_script('jquery');
+
 	wp_enqueue_script( 'tradeplus-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -195,3 +202,9 @@ function special_nav_class ($classes, $item) {
     }
     return $classes;
 }
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

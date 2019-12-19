@@ -45,7 +45,7 @@
 							); ?>
 						</nav>
 					</div>
-					<div class="col-md-3 col-sm-2 end-xs hidden-xs">
+					<div class="col-md-3 col-sm-2 end-xs flex hidden-xs">
 						<div class="header__info"><a href="tel: <?php the_field('phone', 'option'); ?>" class="phone"><?php the_field('phone', 'option'); ?></a><a href="mailto:<?php the_field('email', 'option'); ?>" class="mail"><?php the_field('email', 'option'); ?></a></div>
 					</div>
 				</div>

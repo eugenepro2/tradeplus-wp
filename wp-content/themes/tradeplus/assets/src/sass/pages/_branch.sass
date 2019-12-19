@@ -15,6 +15,8 @@
       padding: 30px 35px
       flex-wrap: wrap
       align-items: flex-start
+    .block
+      width: 100%
     h2
       font-size: 26px
       font-weight: normal
@@ -22,17 +24,22 @@
       text-transform: uppercase
       margin-bottom: 20px
       line-height: 35px
+      b
+        font-weight: normal
+        +r($xs)
+          display: none
       +r($xs)
         word-break: break-word
-        font-size: 20px
+        font-size: 16px
         letter-spacing: 1.25px
         margin-bottom: 18px
+        line-height: 22px
     p
       font-size: 17px
       letter-spacing: 1.13px
       line-height: 22px
       +r($xs)
-        font-size: 14px
+        font-size: 12px
         letter-spacing: 0.08px
     &--blue
       border: solid 1px $light-periwinkle
@@ -75,6 +82,7 @@
       align-items: center
       flex-wrap: wrap
       +r($xs)
+        width: 100%
         margin-bottom: 20px
       i
         width: 50px !important
@@ -92,6 +100,7 @@
           height: 50px
       p
         color: $blue
+        text-transform: uppercase
         letter-spacing: 1.13px
         font-weight: bold
         font-size: 14px
@@ -105,9 +114,13 @@
         p
           color: $dark-blue
     .prev
+      +r($xs)
+        justify-content: flex-start
       i
         margin-right: 30px
     .next
+      +r($xs)
+        justify-content: flex-end
       i
         margin-left: 30px
         transform: rotate(-180deg)

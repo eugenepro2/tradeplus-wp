@@ -22,5 +22,4 @@ new Swiper('.swiper-container', {
     },
 
   }
-
 });

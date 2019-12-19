@@ -12,7 +12,7 @@
       bottom: 0
       position: absolute
       background-color: $dark-blue
-      transition: all .6s cubic-bezier(0.74, 0.01, 0.29, 1)
+      transition: all .6s cubic-bezier(0.74, 0.01, 0.29, 1) !important
     ul
       display: flex
       justify-content: flex-end
@@ -39,18 +39,30 @@
           text-transform: uppercase
   &__info
     display: inline-block
-    text-align: left
+    +r($xs)
+      display: flex
+      flex-direction: column
+      align-items: flex-start
     .phone
       color: $brown
       font-size: 18px
       text-decoration: none
       display: block
       margin-bottom: 7px
+      text-align: right
       +r($md)
         font-size: 14px
+      +r($xs)
+        width: 100%
+        text-align: left
     .mail
       color: $grey-blue
+      display: block
+      text-align: right
       font-size: 14px
+      +r($xs)
+        width: 100%
+        text-align: left
 
 .main .header
   .logo

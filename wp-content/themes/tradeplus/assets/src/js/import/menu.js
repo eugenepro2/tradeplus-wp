@@ -1,7 +1,9 @@
 import $ from 'jquery';
 
 //Вызывем при загрузке страницы
-setWidthAndOffsetFirstMenuItem();
+setTimeout(() => {
+  setWidthAndOffsetFirstMenuItem();
+}, 500);
 //Вызываем при изминении окна браузера
 $(window).resize(function() {
   setWidthAndOffsetFirstMenuItem();

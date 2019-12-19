@@ -1,5 +1,11 @@
+html
+  overflow: -moz-scrollbars-vertical
+  overflow-y: scroll
+  ::-webkit-scrollbar
+    width: 10px
 body
   font-family: 'Helvetica'
+  height: 100%
   &.active
     overflow: hidden
     position: fixed
@@ -10,21 +16,44 @@ body
 .h-100
   height: 100%
 
+.out
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+.content-area
+  flex: 1 0 auto
+.footer
+  flex: 0 0 auto
 
+.content-area
+  overflow: hidden !important
+  +r($xs)
+    padding-top: 100px
 
 .container, .section > .vc_column_container
-  max-width: 1200px
+  max-width: 1200px !important
+  min-width: 1200px !important
   width: 100% !important
   box-sizing: border-box
-  // padding-left: 20px
-  // padding-right: 20px
   margin-left: auto !important
   margin-right: auto !important
   float: none
   +r(1200)
     padding: 0 20px !important
+    min-width: inherit !important
   +r($xs)
     padding: 0 40px !important
+
+.without-top-padding
+  padding-top: 0
+
+.small-container > .vc_column_container
+  max-width: 1000px
+  width: 100% !important
+  box-sizing: border-box
+  margin-left: auto !important
+  margin-right: auto !important
+  float: none
 
 p:empty
   display: none
@@ -52,6 +81,8 @@ p:empty
     color: $dark-blue
     margin-bottom: 15px
     font-weight: normal
+    min-height: 31px
+    max-height: 31px
     +r($xs)
       font-size: 25px
       letter-spacing: 1.56
@@ -71,6 +102,14 @@ p:empty
       transform: translateY(1.9px)
       left: 60px
       transition: all 2s cubic-bezier(0.74, 0.01, 0.29, 1)
+  &__page
+    background: $grey
+    padding: 45px
+    margin-bottom: 40px
+    min-height: 140px
+    max-height: 140px
+    .heading
+      margin-bottom: 0
 
 
 .text
@@ -85,6 +124,9 @@ p:empty
     line-height: 23px
     &:first-child
       margin-bottom: 26px
+    +r($xs)
+      font-size: 14px
+      line-height: 18px
 
 #map-mobile
   width: 100%
@@ -98,15 +140,72 @@ p:empty
   width: 100%
   display: flex
   text-decoration: none
+  min-width: 118px
+  max-width: 118px
+  min-height: 50px
+  max-height: 50px
   h1
-    font-size: 25px
+    font-size: 27px
     font-family: 'Segoe Ui'
     color: $dark-blue
     font-weight: 600
     display: inline-block
     span
-      font-size: 7px
-      letter-spacing: 1.3px
+      font-size: 10px
+      letter-spacing: 2.37px
       text-align: right
       font-weight: normal
       display: block
+
+.banner
+  border-radius: 6px
+  background-color: #f9f9fd
+  width: 100%
+  padding: 0 85px
+  height: 215px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  text-decoration: none
+  flex-wrap: wrap
+  transition: all .3s cubic-bezier(0.74, 0.01, 0.29, 1)
+  +r(1200)
+    margin-bottom: 20px
+  +r($xs)
+    padding: 0 15px
+  &:hover
+    box-shadow: 0 28px 60px 0 rgba(191, 204, 226, 0.24)
+    background-color: $white
+    div
+      background: $dark-blue
+      color: $white
+  p
+    font-size: 24px
+    letter-spacing: 1.5px
+    color: $dark-blue
+    text-transform: uppercase
+    +r($xs)
+      font-size: 20px
+  div
+    background-color: $blue
+    color: $white
+    font-size: 13px
+    width: 60px
+    height: 60px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    text-decoration: none
+    transition: all .6s cubic-bezier(0.74, 0.01, 0.29, 1)
+    +r($xs)
+      width: 40px
+      height: 40px
+    i
+      font-weight: 600
+  &.right
+    flex-direction: row-reverse
+    div i
+      transform: rotate(-180deg)
+      position: relative
+      right: 5px
